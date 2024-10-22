@@ -1,0 +1,8 @@
+QRGenApp/.idea/
+QRGenApp/.venv/
+QRGenApp/build/
+QRGenApp/dist/
+QRGenApp/icon.ico
+
+QRGenWeb/.idea/
+QRGenWeb/.venv/

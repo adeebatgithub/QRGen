@@ -1,0 +1,58 @@
+<Empty@Layout>
+
+<MainScreen>:
+	canvas.before:
+		Color:
+			rgba: 1, 1, 1, 1  # White color (R, G, B, Alpha)
+		Rectangle:
+			pos: self.pos
+			size: self.size
+
+    GridLayout:
+        rows: 3  # Increase rows to accommodate QR code display
+        cols: 0
+        padding: 20
+        spacing: 10
+
+
+        Label:
+        	text: "QR Code Generator"
+        	font_size: 28
+        	color: (0, 0, 0, 1)
+
+        GridLayout:
+        	rows: 4
+        	cols: 0
+
+			Empty:
+			GridLayout:
+				rows: 0
+				cols: 3
+
+				Empty:
+				TextInput:
+					id: qr_data
+					hint_text: "Enter link or data here"
+					multiline: False
+					size_hint: None, None
+					height: 35
+					width: 400
+				Empty:
+			Empty:
+			GridLayout:
+				rows: 0
+				cols: 3
+
+				Empty:
+				Button:
+					text: "Generate QR Code"
+					on_press: root.generate()
+					background_color: (0, 0.6, 0.2, 1)  # Green button color
+					size_hint: None, None
+					height: 45  # Fixed height for the button
+					width: 300
+				Empty:
+
+        Label:
+        	id: message
+        	color: (0, 0, 0, 1)

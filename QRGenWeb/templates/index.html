@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GreenToy</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <nav>
+        <div class="navbar">
+            <div class="logo">
+                <img src="{{ url_for('static', filename='logo.png') }}">
+            </div>
+            <a href="{{ url_for('generator') }}" class="btn">QR Generator</a>
+        </div>
+    </nav>
+    <div class="d-felx justify-content-center">
+        <div class="container">
+            <div class="card">
+                <h1>Welcome to GreenToy Server</h1>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
